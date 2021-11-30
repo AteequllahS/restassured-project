@@ -105,50 +105,7 @@ public class C1_ZipCodeAPITest {
 
     }
 
-    /*
-     Homework 1:
-     *   in one test
-     *   send request to GET https://api.zippopotam.us/us/va/fairfax
-     *   log request all parts
-     *   use va and fairfax as path variables with name state / city
-     *   send get request verify
-     *   status code 200 , json format
-
-
-     *   in another test
-     *   send same request and store the response object
-     *   get JsonPath object from the response
-     *   print last place name
-     *   print all zip codes after storing it into the list
-     *   create a pojo called Place to represent place json object
-     *      with these specific fields :
-     *      - name as String
-     *      - postCode as int
-     *      - latitude as float
-     *      - longitude as float
-     *      {
-     *             "place name": "Fairfax",
-     *             "longitude": "-77.3242",
-     *             "post code": "22030",
-     *             "latitude": "38.8458"
-     *         }
-     *  de-serialize the first response into Place pojo and print it out
-     *  save all the place json array into List<Place> and print it out.
 
 
 
-     HOMEWORK 2:
-
-     * creat a file called state_city.csv underd resources folder
-     * it has two columns state, city
-     * add some valid data
-     *
-     * send request to GET : https://api.zippopotam.us/us/{state}/{city}
-     * log request uri
-     * use state and city as path variables with name state/city
-     * for actual value of path params get it from csv file
-     * send get request verify
-     * status code 200 , json format
-     *
-     */
 }
