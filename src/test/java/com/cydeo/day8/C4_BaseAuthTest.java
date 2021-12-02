@@ -77,7 +77,7 @@ public class C4_BaseAuthTest extends SpartanAuthTestBase {
     public void testEditorDeleteData(){
 
         given()
-                .auth().basic("editor", "editor")
+                .auth().basic("editor", "editor") //only admin, admin can delete
                 .pathParam("id", 34). //any number will be fine as the editor is already blocked to delete items
         when()
                 .delete("/spartans/{id}").
@@ -94,7 +94,7 @@ public class C4_BaseAuthTest extends SpartanAuthTestBase {
      */
 
     @ParameterizedTest
-    @ValueSource(strings = {"admin1", "editor", "user"})
+    @ValueSource(strings = {"admin", "editor", "user"})
     public void testAllUser_GetAllSpartans( String role){
 
         //in this particular api, username and password have same value as role name

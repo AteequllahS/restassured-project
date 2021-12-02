@@ -3,7 +3,7 @@ package com.cydeo.day6;
 import com.cydeo.pojo.Car;
 import org.junit.jupiter.api.Test;
 
-public class CarPojoTest_Class {
+public class CarPojoTest_ClassTest {
 
     @Test
     public void testCarPojoClass(){

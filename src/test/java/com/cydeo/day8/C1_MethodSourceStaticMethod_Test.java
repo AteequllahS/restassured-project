@@ -9,7 +9,7 @@ import java.util.List;
  * to demonstrate providing the MethodSource
  * for a ParameterizedTest and the method exist outside the class
  */
-public class C1_MethodSourceStaticMethod {
+public class C1_MethodSourceStaticMethod_Test {
 
     // create a STATIC method that return list of names
     //so we can use the returned value as data source for our ParameterizedTest

@@ -9,7 +9,7 @@ import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class C02_HamcrestMatcher {
+public class C02_HamcrestMatcher_Test {
 
    /*
    Hamcrest is a framework for writing matcher objects allowing ‘match’ rules to be defined declaratively.

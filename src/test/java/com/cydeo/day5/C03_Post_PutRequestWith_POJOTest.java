@@ -8,7 +8,7 @@ import io.restassured.http.ContentType;
 import static io.restassured.RestAssured.*;
 
 
-public class C03_Post_PutRequestWith_POJO extends SpartanTestBase{
+public class C03_Post_PutRequestWith_POJOTest extends SpartanTestBase{
 
     /*
      POST /spartans

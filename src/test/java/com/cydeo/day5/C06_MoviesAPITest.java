@@ -1,6 +1,6 @@
 package com.cydeo.day5;
 
-public class C06_MoviesAPI {
+public class C06_MoviesAPITest {
 
     /*
 

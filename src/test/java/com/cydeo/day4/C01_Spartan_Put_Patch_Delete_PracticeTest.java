@@ -7,7 +7,7 @@ import io.restassured.http.ContentType;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class C01_Spartan_Put_Patch_Delete_Practice extends SpartanTestBase {
+public class C01_Spartan_Put_Patch_Delete_PracticeTest extends SpartanTestBase {
 
     @Test
     public void testUpdate() {

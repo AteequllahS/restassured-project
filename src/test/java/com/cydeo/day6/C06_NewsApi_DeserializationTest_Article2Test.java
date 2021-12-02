@@ -14,7 +14,7 @@ import java.util.List;
 import static io.restassured.RestAssured.*;
 
 
-public class C06_NewsApi_DeserializationTest_Article2 {
+public class C06_NewsApi_DeserializationTest_Article2Test {
 
     @BeforeAll
     public static void setup() {

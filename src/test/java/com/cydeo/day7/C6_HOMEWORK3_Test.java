@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.*;
 
 
 
-public class C6_HOMEWORK3 {
+public class C6_HOMEWORK3_Test {
 
     /**
      * ### Task last

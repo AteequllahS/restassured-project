@@ -22,7 +22,7 @@ import static io.restassured.RestAssured.*;
 
  */
 
-public class C5_HOMEWORK2 {
+public class C5_HOMEWORK2_Test {
 
     @BeforeAll
     public static void setup(){

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
-public class C01_HomeWork_MoviesAPI {
+public class C01_HomeWork_Movies_APITest {
 
     /*
         Send this request GET http://www.omdbapi.com/?s=The Mandalorian

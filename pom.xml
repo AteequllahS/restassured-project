@@ -52,6 +52,14 @@
             <artifactId>lombok</artifactId>
             <version>1.18.22</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-suite -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <version>1.8.2</version>
+        </dependency>
+
     </dependencies>
 
 </project>

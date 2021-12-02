@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 
-public class C02_LibraryLoginRequest {
+public class C02_LibraryLoginRequest_Test {
 
 
     @BeforeAll

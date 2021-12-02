@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.List;
 
-public class C2_ZipCodesMethodSource {
+public class C2_ZipCodesMethodSource_Test {
 
     /**
      * Write a method that return all zip codes for fairfax, VA

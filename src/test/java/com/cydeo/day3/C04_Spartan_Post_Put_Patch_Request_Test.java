@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class C04_Spartan_Post_Put_Patch_Request extends SpartanTestBase {
+public class C04_Spartan_Post_Put_Patch_Request_Test extends SpartanTestBase {
 
     @Test
     public void add1DataStringBody(){

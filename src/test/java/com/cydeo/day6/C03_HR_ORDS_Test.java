@@ -11,7 +11,7 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 
-public class C03_HR_ORDS_TestJob2 extends HrORDSTestBase {
+public class C03_HR_ORDS_Test extends HrORDSTestBase {
 
         // GET /jobs
 

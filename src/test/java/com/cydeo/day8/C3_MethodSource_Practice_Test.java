@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class C3_MethodSource_Practice {
+public class C3_MethodSource_Practice_Test {
 
     // create a method that return List <Map <String, Object> >
     //Map object should have key : name, gender, phone

@@ -18,7 +18,7 @@ import static io.restassured.RestAssured.baseURI;
 import static org.hamcrest.Matchers.*;
 
 
-public class C4_HOMEWORK1 {
+public class C4_HOMEWORK1_Test {
 /**
  Homework 1:
  *   in one test
