@@ -1,0 +1,11 @@
+## API - DB Validation
+Just like we did on UI - DB validation for example the dashboard number in library app :
+we got expected result from database and compare that with the UI Dashboard number,
+
+We can do similar type of test for API-DB validation.
+The objective is the response that coming from the api request is matching actual data in the database.
+
+Sometime , when the api is created , it is not actually connected to the real database to prototype the
+response with some dummy data so UI can display those data by calling the api that return dummy data.
+When it's actually connected to the database, we can make sure the data is actually coming from database
+rather than dummy data as response.

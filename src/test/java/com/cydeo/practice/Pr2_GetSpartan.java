@@ -1,13 +1,11 @@
 package com.cydeo.practice;
 
 import com.cydeo.utility.SpartanTestBase;
-import groovy.util.MapEntry;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.*;

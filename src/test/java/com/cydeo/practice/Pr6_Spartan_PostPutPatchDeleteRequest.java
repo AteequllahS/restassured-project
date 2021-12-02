@@ -2,9 +2,6 @@ package com.cydeo.practice;
 
 import com.cydeo.utility.SpartanTestBase;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.get;
