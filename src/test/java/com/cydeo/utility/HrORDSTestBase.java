@@ -19,10 +19,23 @@ public class HrORDSTestBase {
         baseURI = "http://54.174.254.49:1000";
         basePath = "/ords/hr";
 
+        //calling our created connection method in this class
+        createHrConnection(); // this will connect to HR database
+
     }
 
     @AfterAll
     public static void tearDown(){
         reset();
+        DB_Util.destroy();
+    }
+
+    public static void createHrConnection() {
+
+        String url = ConfigReader.read("hr.database.url");
+        String username = ConfigReader.read("hr.database.username");
+        String password = ConfigReader.read("hr.database.password");
+        DB_Util.createConnection(url, username, password);
+
     }
 }

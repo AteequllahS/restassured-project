@@ -40,9 +40,9 @@ public class DB_Util {
      */
     public static void createConnection() {
 
-        String url = ConfigReader.read("library2.database.url");
-        String username = ConfigReader.read("library2.database.username");
-        String password = ConfigReader.read("library2.database.password");
+        String url = ConfigReader.read("hr.database.url");
+        String username = ConfigReader.read("hr.database.username");
+        String password = ConfigReader.read("hr.database.password");
         createConnection(url, username, password);
 
     }

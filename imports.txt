@@ -35,3 +35,6 @@ import static io.restassured.RestAssured.*;
 import static io.restassured.RestAssured.basePath;
 import static io.restassured.RestAssured.baseURI;
 import static org.hamcrest.Matchers.*;
+
+//json schema validate import
+import static io.restassured.module.jsv.JsonSchemaValidator.*;

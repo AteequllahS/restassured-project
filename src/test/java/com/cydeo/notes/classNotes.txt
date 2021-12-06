@@ -9,3 +9,12 @@ Sometime , when the api is created , it is not actually connected to the real da
 response with some dummy data so UI can display those data by calling the api that return dummy data.
 When it's actually connected to the database, we can make sure the data is actually coming from database
 rather than dummy data as response.
+
+2. Add your db utility class from previous project under this project utility package
+3. Create a class called API_DB_Test
+4. Create a test class and try out your connection
+5. Run Simple Query
+
+SELECT * FROM REGIONS
+
+6. Print it out.
