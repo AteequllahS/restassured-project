@@ -1,4 +1,4 @@
-package com.cydeo.tests.day4;
+package com.cydeo.tests.day4_LibraryLogin;
 
 import io.restassured.response.Response;
 import org.junit.jupiter.api.AfterAll;

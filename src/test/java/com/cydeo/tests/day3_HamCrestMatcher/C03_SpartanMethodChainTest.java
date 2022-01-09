@@ -1,6 +1,9 @@
-package com.cydeo.tests.day3;
+package com.cydeo.tests.day3_HamCrestMatcher;
 import com.cydeo.utility.SpartanTestBase;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
@@ -21,7 +24,7 @@ public class C03_SpartanMethodChainTest extends SpartanTestBase {
         //json body : id is 2,
         //name: Nels
         given().log().all().
-                pathParam("id", 2).
+                pathParam("id", 4).
                 accept(ContentType.JSON).
         when().
                 get("/spartans/{id}").prettyPeek().
@@ -31,8 +34,8 @@ public class C03_SpartanMethodChainTest extends SpartanTestBase {
                 //header("Content-Type", "application/json")
                 //header("Content-Type", ContentType.JSON.toString()  )
                 contentType( ContentType.JSON).
-                body("id", is (2)). // validatable response
-                body("name", is ("Nels")  )
+                body("id", is (4)). // validatable response
+                body("name", is ("Paige")  )
         ;
 
     }
@@ -67,6 +70,26 @@ public class C03_SpartanMethodChainTest extends SpartanTestBase {
                 body("content.name", everyItem( containsStringIgnoringCase("ea")) )
 
                 ;
+
+    }
+
+    @Test
+    public void get1Search(){
+
+        given()
+                            .log().all()
+                            .pathParam("id", 163)
+                            .accept(ContentType.JSON).
+                when().
+                            get("spartans/{id}")
+
+                .then()
+                        .statusCode(200)
+                        .body("id", is(163))
+                ;
+
+
+
 
     }
 }

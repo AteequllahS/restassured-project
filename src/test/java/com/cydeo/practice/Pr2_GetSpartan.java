@@ -2,11 +2,11 @@ package com.cydeo.practice;
 
 import com.cydeo.utility.SpartanTestBase;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -36,20 +36,35 @@ public class Pr2_GetSpartan extends SpartanTestBase {
 
         Response r = get("/spartans");
 
+
+
         //List<String> allNames = r.path("name");
         //System.out.println(allNames);
 
-        Map<String, String> idNames = new LinkedHashMap<>();
+        List<Map<Integer, String>> eachPerson = new LinkedList<>();
 
-        idNames.put(r.path("id").toString(), r.path("name").toString());
+        Map<Integer, String> inner1 = new LinkedHashMap<>();
 
-        for (Map.Entry<String, String> each : idNames.entrySet()){
+        //it indicates all ids of spartans
+        List<Integer> allIds = new ArrayList<>(r.path("id"));
 
-            System.out.println(each.getKey()+" | "+each.getValue());
+        //list of all names
+        List<String> allNames = r.path("names");
+
+        for (int i = 0; i < allIds.size(); i++) {
+
+//            inner1.put(i, r1);
         }
 
-        System.out.println(idNames.getOrDefault("2", "Nels"));
-        System.out.println(idNames.get("5"));
+        for (int i = 0; i < allIds.size(); i++) {
+
+            eachPerson.add(i, inner1);
+
+        }
+
+        System.out.println("eachPerson = " + eachPerson);
+
+
     }
 
     @Test

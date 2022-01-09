@@ -1,4 +1,4 @@
-package com.cydeo.tests.day1;
+package com.cydeo.tests.day1_Spartans;
 
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;

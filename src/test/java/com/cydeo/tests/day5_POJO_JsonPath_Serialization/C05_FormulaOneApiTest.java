@@ -1,4 +1,4 @@
-package com.cydeo.tests.day5;
+package com.cydeo.tests.day5_POJO_JsonPath_Serialization;
 
 public class C05_FormulaOneApiTest {
 

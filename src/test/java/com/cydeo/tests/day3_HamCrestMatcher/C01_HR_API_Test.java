@@ -1,4 +1,4 @@
-package com.cydeo.tests.day3;
+package com.cydeo.tests.day3_HamCrestMatcher;
 
 import static io.restassured.RestAssured.*;
 import io.restassured.http.ContentType;
@@ -27,7 +27,8 @@ public class C01_HR_API_Test {
         Response response = given().
                                 //.log().all().
 
-                            when().get("/jobs");
+                            when()
+                                .get("/jobs");
 
         response.prettyPrint();
 

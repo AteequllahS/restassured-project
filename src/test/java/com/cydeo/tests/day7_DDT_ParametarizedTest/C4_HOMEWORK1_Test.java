@@ -1,4 +1,4 @@
-package com.cydeo.tests.day7;
+package com.cydeo.tests.day7_DDT_ParametarizedTest;
 
 
 import com.cydeo.pojo.Place;

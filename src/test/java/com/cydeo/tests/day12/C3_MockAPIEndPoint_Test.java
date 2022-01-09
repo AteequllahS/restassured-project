@@ -60,7 +60,7 @@ public class C3_MockAPIEndPoint_Test {
         when()
                 .post("upload").
         then()
-        .statusCode(200)
+                .statusCode(200)
         ;
     }
 

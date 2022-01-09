@@ -40,14 +40,20 @@ public class Pr1_GetPractice {
 //        List<Integer> all_ids = response.path("id");
 //        System.out.println(all_ids);
 
-        Map<String, String> spartans = new LinkedHashMap<>();
 
-        spartans.put(response.path("id").toString(), response.path("name").toString());
+        List<Integer> ids = response.path("id");
+        List<String> names = response.path("name");
 
-        for (Map.Entry<String, String> each :spartans.entrySet()){
-            System.out.println(" key = "+ each.getKey()+ ", value = "+each.getValue());
+        Map<Integer, String> idNames = new LinkedHashMap<>();
+
+        for (int i = 0; i < ids.size(); i++) {
+
+            idNames.put(ids.get(i), names.get(i));
 
         }
+
+
+        System.out.println("idNames = " + idNames);
 
 
     }

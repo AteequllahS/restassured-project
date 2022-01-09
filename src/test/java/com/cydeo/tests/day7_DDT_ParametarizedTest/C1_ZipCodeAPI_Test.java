@@ -1,4 +1,4 @@
-package com.cydeo.tests.day7;
+package com.cydeo.tests.day7_DDT_ParametarizedTest;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -51,15 +51,15 @@ public class C1_ZipCodeAPI_Test {
                 .get("/{zip}").
         then()
                 .log().all()
-        .statusCode( is(200) )
-        .contentType( ContentType.JSON)
-        .body("country", is ("United States"))
-        .body("places[0].state", equalToIgnoringCase("virginia"))
+                .statusCode( is(200) )
+                .contentType( ContentType.JSON)
+                .body("country", is ("United States"))
+                .body("places[0].state", equalToIgnoringCase("virginia"))
 
 //if we have two word with an space in between, we need to put them inside single quote after double quotation
-        .body("'post code'", equalTo ("22030"))
-        .body("'country abbreviation'", is ("US"))
-        .body("places[0].'place name'", is("Fairfax"))
+                .body("'post code'", equalTo ("22030"))
+                .body("'country abbreviation'", is ("US"))
+                .body("places[0].'place name'", is("Fairfax"))
                 ;
     }
 
@@ -99,9 +99,9 @@ public class C1_ZipCodeAPI_Test {
         given()
                 .log().uri()
                 .pathParam("zip", zipParam).
-                when()
+        when()
                 .get("/{zip}").
-                then()
+        then()
                 .statusCode(200) ;
 
     }

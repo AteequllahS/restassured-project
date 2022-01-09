@@ -107,9 +107,9 @@ public class C2_NegativeTest extends SpartanTestBase{
                 .log().all()
                 .contentType(ContentType.JSON)
                 .body( invalidBody ).
-                when()
+        when()
                 .post("/spartans").
-                then()
+        then()
                 .log().all()
                 .statusCode(400) // we are expecting 400 for this negative scenario
                 .body("message", is("Invalid Input!"))

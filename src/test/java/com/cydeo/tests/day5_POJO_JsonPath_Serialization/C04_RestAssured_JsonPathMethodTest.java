@@ -1,4 +1,4 @@
-package com.cydeo.tests.day5;
+package com.cydeo.tests.day5_POJO_JsonPath_Serialization;
 
 import com.cydeo.pojo.SpartanWithID;
 import com.cydeo.utility.SpartanTestBase;

@@ -1,12 +1,9 @@
-package com.cydeo.tests.day2;
+package com.cydeo.tests.day2_TestOneSpartan;
 
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.http.Header;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -14,50 +11,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import static io.restassured.RestAssured.*;
-import static sun.plugin.ClassLoaderInfo.reset;
 
-public class Test_OneSpartan2_Test {
-
-    @BeforeAll
-    public static void setup(){
-        //BaseURI : http://54.174.254.49:8000
-        //BasePath : /api
-        //Anything comes after actual resources
-
-        RestAssured.baseURI = "http://54.174.254.49:8000";
-        RestAssured.basePath = "/api";
-
-    }
-
-    @AfterAll
-    public static void tearDown(){
-
-        // in order to avoid static value accidentally carried over
-        //to different class when we practice different api,
-        // it's better if we set baseURI basePath back to it's original value using reset method
-        //RestAssured.reset();
-        reset();
-
-    }
-
-    // add a new test to check GET api/hello Endpoint
-    // verify status code is 200, content type is text/plain, body is Hello from Spartan ( this is string not json )
-    @Test
-    public void testHelloAgain(){
-
-        Response response = get("/hello");
-        Assertions.assertEquals(200, response.statusCode());
-        //Assertions.assertEquals(ContentType.TEXT.toString(), response.contentType()); //-> this does not work
-        Assertions.assertEquals("text/plain;charset=UTF-8", response.contentType());
-        Assertions.assertEquals("Hello from Sparta", response.asString());
-    }
-
-
+public class Test_OneSpartan_Test {
 
     @Test
-    public void testOneSpartan2(){
+    public void oneSpartan(){
 
-        Response response = get("/spartans/6");//getting the 6th spartan
+        //GET   http://54.174.254.49:8000/api/spartans/5
+        Response response = get("http://54.174.254.49:8000/api/spartans/5");
 
         int statusCode = response.statusCode();
         System.out.println("statusCode = " + statusCode);
@@ -67,10 +28,10 @@ public class Test_OneSpartan2_Test {
         response.prettyPrint();
 
         //another way to print the body asString
-        System.out.println("response.asString() = " + response.asString());
+//        System.out.println("response.asString() = " + response.asString());
 
         //another way to print the body getBody
-        System.out.println("response.getBody() = " + response.getBody().prettyPrint());
+//        System.out.println("response.getBody() = " + response.getBody().prettyPrint());
 
 
         //==================getting the header ====================
@@ -98,7 +59,8 @@ public class Test_OneSpartan2_Test {
     @Test
     public void testContentTypeHeader(){
 
-        Response response = get("/spartans/6");
+        //GET   http://54.174.254.49:8000/api/spartans/5
+        Response response = get("http://54.174.254.49:8000/api/spartans/6");
 
         //RestAssured has special support for common header like contentType with method
         System.out.println("response.getContentType() = " + response.getContentType());
@@ -122,7 +84,8 @@ public class Test_OneSpartan2_Test {
     @Test
     public void testAllHeaders(){
 
-        Response response = get("/spartans/6");
+        //GET   http://54.174.254.49:8000/api/spartans/5
+        Response response = get("http://54.174.254.49:8000/api/spartans/6");
 
         List<String> expectedHeaders = new ArrayList<>(Arrays.asList("Content-Type", "Transfer-Encoding", "Date", "Keep-Alive", "Connection"));
 
@@ -151,7 +114,9 @@ public class Test_OneSpartan2_Test {
             "phone": 2227140732
         }
 */
-        Response response = get("/spartans/6");
+        String url = "http://54.174.254.49:8000/api";
+
+        Response response = get(url+"/spartans/6");//getting the 6th spartan
 
         response.prettyPrint();
 
@@ -178,5 +143,7 @@ public class Test_OneSpartan2_Test {
         Assertions.assertEquals(name, "Tedmund");
         Assertions.assertEquals(gender, "Male");
         Assertions.assertEquals(phone, 2227140732L); //adding an L if used as long
+
+
     }
 }

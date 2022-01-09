@@ -1,4 +1,4 @@
-package com.cydeo.tests.day3;
+package com.cydeo.tests.day3_HamCrestMatcher;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

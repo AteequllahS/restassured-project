@@ -1,4 +1,4 @@
-package com.cydeo.tests.day2;
+package com.cydeo.tests.day2_TestOneSpartan;
 import static io.restassured.RestAssured.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -52,6 +53,11 @@ public class TestSpartan3_Test {
         //get all athe id (instead of one ) and store it into List<Integer.
         List<Integer> idList = response.path("id");
         System.out.println("idList = " + idList);
+
+        List<String> allNames = new ArrayList<>();
+        allNames.add(response.path("name"));
+
+        System.out.println("allNames = " + allNames);
 
     }
 

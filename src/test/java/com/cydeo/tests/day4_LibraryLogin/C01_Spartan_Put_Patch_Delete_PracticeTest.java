@@ -1,4 +1,4 @@
-package com.cydeo.tests.day4;
+package com.cydeo.tests.day4_LibraryLogin;
 
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Tag;
@@ -38,10 +38,10 @@ public class C01_Spartan_Put_Patch_Delete_PracticeTest extends SpartanTestBase {
                 pathParam("id", "5").
                 contentType(ContentType.JSON).
                 body(updatedBody).
-                when().
+        when().
                 put("/spartans/{id}").
 
-                then().
+        then().
                 log().all().
                 statusCode(equalTo(204));
 
